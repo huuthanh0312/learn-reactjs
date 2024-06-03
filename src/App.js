@@ -27,7 +27,7 @@ function App() {
         <p>{student.name}</p>
         <ul>
           {colorList.map( color => (
-          <li>{color}</li>
+          <li key={color} style={{color}}>{color}</li>
           ))}
         </ul>
       </header>
