@@ -1,7 +1,8 @@
 //import './App.css';
-import { Link, NavLink, Navigate, Route, Routes } from "react-router-dom";
-import AlbumFeature from "./features/Album";
-import TodoFeature from "./features/Todo";
+import { Link, NavLink, Navigate, Route, Routes } from 'react-router-dom';
+import AlbumFeature from './features/Album';
+import TodoFeature from './features/Todo';
+import NotFound from './compoments/NotFound';
 
 function App() {
   return (
@@ -13,15 +14,12 @@ function App() {
       <p>
         <Link to="/albums">Album</Link>
       </p>
+      {/* <Navigate from="/home" to="/" exact /> */}
       <Routes>
-        <Route
-          path="/todos"
-          element={<TodoFeature />}
-        />
-        <Route
-          path="/albums"
-          element={<AlbumFeature />}
-        />
+        <Route path="/" />
+        <Route path="/todos/*" element={<TodoFeature />} />
+        <Route path="/albums/*" element={<AlbumFeature />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       Footer
     </div>
