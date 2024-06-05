@@ -46,12 +46,15 @@ function TodoFeature(props) {
     setFilteredStatus("new");
   };
   const renderTodoList = todoList.filter(
-    (todo) => filteredStatus === "all" || filteredStatus === todo.status
+    (todo) => filteredStatus === "all" || filteredStatus === todo.status,
   );
   return (
     <div>
       <h3>Todo List</h3>
-      <TodoList todoList={renderTodoList} onTodoClick={handleTodoClick} />
+      <TodoList
+        todoList={renderTodoList}
+        onTodoClick={handleTodoClick}
+      />
       <button onClick={handleShowAllClick}>Show All</button>
       <button onClick={handleShowCompletedClick}>Show Completed</button>
       <button onClick={handleShowNewClick}>Show New</button>

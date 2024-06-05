@@ -1,9 +1,8 @@
-//import './App.css';
-import { Link, NavLink, Navigate, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import AlbumFeature from "./features/Album";
 import TodoFeature from "./features/Todo";
 
-function App() {
+export function App() {
   return (
     <div className="App">
       Home Page
@@ -27,5 +26,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
